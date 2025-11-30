@@ -4,6 +4,27 @@
 /* ------------------------------------------------------
    LIGHTBOX / FULLSCREEN FIX
 ------------------------------------------------------ */
+/* Dark starry background */
+body {
+  background: radial-gradient(ellipse at bottom, #0d0d0d 0%, #111 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Star styling */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+}
+
+/* Twinkle animation */
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
 .lb-image {
   transition: opacity 0.5s ease;
   opacity: 0;
