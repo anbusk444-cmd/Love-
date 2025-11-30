@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // -------------------------------
+function showImage() {
+  lbImage.classList.remove("show"); // fade out
+  setTimeout(() => {
+    const selected = images[currentIndex];
+    lbImage.src = selected.src;
+    lbCaption.textContent = selected.alt;
+    lbImage.classList.add("show"); // fade in
+  }, 100);
+}
 // LIGHTBOX SETUP
 // -------------------------------
 const lightbox = document.getElementById("lightbox");
