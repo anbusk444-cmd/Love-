@@ -4,6 +4,15 @@
 /* ------------------------------------------------------
    LIGHTBOX / FULLSCREEN FIX
 ------------------------------------------------------ */
+.photo img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
 /* Beautiful glowing effect */
 .lightbox {
   opacity: 0;
