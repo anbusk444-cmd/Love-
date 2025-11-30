@@ -1,3 +1,16 @@
+.lb-image {
+  position: relative;
+  z-index: 100000;   /* bring image on top */
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.lightbox {
+  z-index: 999999; /* above everything */
+}
+
+
 .lightbox {
 position: fixed;
 inset: 0;
