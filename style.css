@@ -5,6 +5,16 @@
    LIGHTBOX / FULLSCREEN FIX
 ------------------------------------------------------ */
 /* Beautiful glowing effect */
+.lightbox {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9);
+}
+
+.lightbox.active {
+  opacity: 1;
+  transform: scale(1);
+}
 .photo img {
   border: 2px solid #ff4f9f;
   box-shadow: 0 0 15px #ff4f9f, 0 0 30px #a45bff;
