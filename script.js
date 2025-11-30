@@ -1,6 +1,30 @@
 // -------------------------------
 // YEAR AUTO UPDATE
 // -------------------------------
+// HEART POP ANIMATION ON IMAGE CLICK
+images.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    createHeart(e);
+  });
+});
+
+function createHeart(e) {
+  const heart = document.createElement("div");
+  heart.classList.add("heart-pop");
+  heart.textContent = "❤️";
+
+  const x = e.pageX - 20;
+  const y = e.pageY - 20;
+
+  heart.style.left = x + "px";
+  heart.style.top = y + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 600);
+}
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
