@@ -1,6 +1,24 @@
 // -------------------------------
 // YEAR AUTO UPDATE
 // -------------------------------
+// Generate stars dynamically
+const numStars = 100; // Number of stars
+const body = document.body;
+
+for (let i = 0; i < numStars; i++) {
+  const star = document.createElement('div');
+  star.classList.add('star');
+  
+  // Random position and size
+  const size = Math.random() * 3 + 1; // 1px to 4px
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
+  star.style.top = `${Math.random() * window.innerHeight}px`;
+  star.style.left = `${Math.random() * window.innerWidth}px`;
+  star.style.animationDuration = `${Math.random() * 3 + 2}s`; // twinkle speed
+  
+  body.appendChild(star);
+}
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
